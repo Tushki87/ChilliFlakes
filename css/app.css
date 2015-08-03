@@ -1,0 +1,56 @@
+
+body {
+    background-image: url("/Users/tushar/Desktop/Chilliflakes/images/Chilliflakes.png");
+}
+footer {
+    background-color: #333;
+    width: 100%;
+    height:40px;
+    bottom: 0;
+    position: fixed;
+}
+#navMenu {
+	padding-top:20px;
+}
+.main-example .count.top {
+	line-height: 3.3em !important;
+}
+span#mainName {
+	color: red;
+	font-family: 'Tangerine', serif;
+    font-size: 50px;
+    text-shadow: 4px 4px 4px #aaa;
+}
+#homeLogo {
+   content:url("/Users/tushar/Desktop/Chilliflakes/images/homeLogo.png");
+   width:50px;
+   height:60px;
+   vertical-align: bottom;
+}​
+/*#toggle {
+	position:absolute;
+	bottom:0;  
+	margin-bottom:7px; 
+	margin:7px; right: 0;
+}*/
+div.main-example {
+	color:black !important;
+	font-size: 25px !important;
+}
+
+#powered {
+	color:white !important;
+	float: left;
+}
+
+#copyright {
+	color:white !important;
+	float:right;
+}
+.pure-u-1-2 {
+	width:100% !important;
+}
+#labelName {
+	color:black !important;
+	font-size: 15px !important;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<!-- define angular app -->
+<html ng-app="Chilliflakes">
+
+<head>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/pure-min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oswald">
+  <link rel="stylesheet" href="http://hilios.github.io/jQuery.countdown/css/syntax.css">
+  <link rel="stylesheet" href="http://hilios.github.io/jQuery.countdown/css/main.css">
+  
+   <!-- SCROLLS -->
+  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Tangerine">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/app.css" />
+
+  <!-- SPELLS -->
+  <script src="plugins/jquery-2.1.4.min.js"></script>
+  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+  <script src="plugins/jquery.countdown.min.js"></script>
+  <script src="js/countdown.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+  
+</head>
+
+<!-- define angular controller -->
+<body ng-controller="mainController">
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><img id="homeLogo"></img><span id="mainName">Chilli Flakes</span></a>
+      <div id="toggle">  
+      <button type="button" class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      </div>
+      </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right" id="navMenu">
+        <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+        <li><a href="#menu"><i class="fa fa-star"></i> Menu</a></li>
+        <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+        <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
+      </ul>
+    </div>  
+    </div>
+  </nav>
+
+  <div id="main">
+  <img id="backImage"></img>
+    <!-- angular templating -->
+        <!-- this is where content will be injected -->
+  <div class="pure-u-1-2">
+    <div class="main-example">
+      <p><b>COMING SOON..<b></p>
+    <div class="countdown-container" id="main-example"></div>
+  </div>   
+    <div ng-view></div>
+    
+  </div>
+  
+  <footer id="footer" class="text-center">
+  <div id="footer_bottom">
+    <div id="powered">@Chilliflakes</div>
+
+    <!--</div>-->
+    <div id="copyright">
+    <a href="/terms.asp" id="copyright">Copyright &copy; <script type="text/javascript">document.write((new Date()).getFullYear());</script>  &nbsp;Chilliflakes&nbsp;All Rights Reserved.</a>
+    </div>
+  </div>
+  </footer>
+  <script type="text/template" id="main-example-template">
+  <div class="time <%= label %>">
+    <span class="count curr top"><%= curr %></span>
+    <span class="count next top"><%= next %></span>
+    <span class="count next bottom"><%= next %></span>
+    <span class="count curr bottom"><%= curr %></span>
+    <span class="label" id="labelName"><%= label.length < 6 ? label : label.substr(0, 3)  %></span>
+  </div>
+</script>
+</body>
+
+</html>
